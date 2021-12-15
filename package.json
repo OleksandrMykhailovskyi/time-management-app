@@ -1,0 +1,41 @@
+{
+    "name": "pomodoro-app",
+    "description": "RD-LAB Productivity Application",
+    "author": "Iurii Klymiuk",
+    "contributors": [
+        "Andrii Dieiev"
+    ],
+    "scripts": {
+        "build": "webpack",
+        "start": "webpack-dev-server --open"
+    },
+    "devDependencies": {
+        "@babel/core": "7.14.8",
+        "@babel/preset-env": "7.14.8",
+        "babel-loader": "^8.2.2",
+        "copy-webpack-plugin": "^4.5.2",
+        "css-loader": "^1.0.0",
+        "file-loader": "^1.1.11",
+        "handlebars-loader": "^1.7.1",
+        "less": "^3.8.0",
+        "less-loader": "^4.1.0",
+        "mini-css-extract-plugin": "^0.4.1",
+        "style-loader": "^0.21.0",
+        "url-loader": "^1.0.1"
+    },
+    "dependencies": {
+        "express-handlebars": "^5.3.3",
+        "firebase": "^8.9.1",
+        "firebase-tools": "^9.17.0",
+        "handlebars": "^4.7.7",
+        "handlebars-helpers": "^0.10.0",
+        "highcharts": "^9.2.2",
+        "jquery": "^3.6.0",
+        "jquery-ui": "^1.12.1",
+        "moment": "^2.29.1",
+        "nanoid": "^3.1.25",
+        "webpack": "^4.16.2",
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-server": "^3.1.5"
+    }
+}

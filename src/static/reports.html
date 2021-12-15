@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Productivity app</title>
+</head>
+
+<body class="body page--report">
+    <div class="wrapper">
+        <header class="header">
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <span class="icon icon-list"></span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <span class="icon icon-statistics"></span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <span class="icon icon-settings"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <h1 class="title">Report</h1>
+            <div class="report">
+                <ul class="report-header toggle-list">
+                    <li class="toggle-list__item">
+                        <a href="#" class="toggle-list__link">Day</a>
+                    </li>
+                    <li class="toggle-list__item">
+                        <a href="#" class="toggle-list__link">Week</a>
+                    </li>
+                    <li class="toggle-list__item">
+                        <a href="#" class="toggle-list__link">Month</a>
+                    </li>
+                </ul>
+                <div class="report-content">
+                    <a href="#" class="report-content__arrow">
+                        <span class="icon icon-arrow-left"></span>
+                    </a>
+                    <div class="report-content-diagram">
+                        <img class="todo-entrance__logo-img" src="./../images/Graph.png" alt="diagram">
+                    </div>
+                </div>
+                <ul class="report-footer toggle-list">
+                    <li class="toggle-list__item">
+                        <a href="#" class="toggle-list__link">Pomodoros</a>
+                    </li>
+                    <li class="toggle-list__item">
+                        <a href="#" class="toggle-list__link">Tasks</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="popup display--none">
+                <div class="popup-body">
+                    <div class="popup-content">
+                        <nav class="popup-content__nav">
+                            <ul class="popup-content__nav-ul">
+                                <li class="popup-content__nav-img">
+                                    <a href="#" class="popup-content__link">
+                                        <span class="icon icon-close"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="popup-content__items">
+                            <h2 class="popup-content__items-title">Remove Task</h2>
+                            <h3 class="popup-content__items-message">Are you sure you want to remove selected task(s)?</h3>
+                            <div class="popup-buttons popup-buttons--two-items">
+                                <div class="popup-buttons__wrapper buttons-two-items--cancel-remove">
+                                    <button class="button">Cancel</button>
+                                    <button class="button">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>

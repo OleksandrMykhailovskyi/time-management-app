@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Settings</title>
+</head>
+
+<body class="body page--settings">
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo display--none">
+                <a href="#" class="logo__link">
+                    <img class="logo__img" src="./../images/Logo.svg" alt="logo">
+                </a>
+            </div>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <span class="icon icon-list"></span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <span class="icon icon-statistics"></span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <span class="icon icon-settings"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="container">
+                <ul class="toggle-list">
+                    <li class="toggle-list__item">
+                        <a href="#" class="toggle-list__link">Pomodoros</a>
+                    </li>
+                    <li class="toggle-list__item">
+                        <a href="#" class="toggle-list__link">Categories</a>
+                    </li>
+                </ul>
+                <h1 class="title">Settings</h1>
+                <h2 class="subtitle">Pomodoros settings</h2>
+            </div>
+            <section class="section page--settings__pomodoros">
+                <ul class="categories-list">
+                    <li class="categories-list__items">
+                        <label class="setting-type__name" for="work-time">Work time</label>
+                        <div class="setting-type__amount--wrapper">
+                            <button class="button--amount-minus">-</button>
+                            <input class="setting-type__amount" type="number" value="25" id="work-time" step="5"
+                                min="15" max="25">
+                            <button class="button--amount-plus">+</button>
+                        </div>
+                        <p class="setting-type__description">Please select a value between 15 and 25
+                            <strong class="settings-type__last-word">minutes</strong>
+                        </p>
+                    </li>
+                    <li class="categories-list__items">
+                        <label class="setting-type__name" for="work-iteration">Work iteration</label>
+                        <div class="setting-type__amount--wrapper">
+                            <button class="button--amount-minus">-</button>
+                            <input class="setting-type__amount" type="number" value="5" id="work-iteration" step="1"
+                                min="2" max="5">
+                            <button class="button--amount-plus">+</button>
+                        </div>
+                        <p class="setting-type__description">Please select a value between 2 and 5
+                            <strong class="settings-type__last-word">iterations</strong>
+                        </p>
+                    </li>
+                    <li class="categories-list__items">
+                        <label class="setting-type__name" for="short-break">Short break</label>
+                        <div class="setting-type__amount--wrapper">
+                            <button class="button--amount-minus">-</button>
+                            <input class="setting-type__amount" type="number" value="5" id="short-break" step="1"
+                                min="3" max="5">
+                            <button class="button--amount-plus">+</button>
+                        </div>
+                        <p class="setting-type__description">Please select a value between 3 and 5
+                            <strong class="settings-type__last-word">minutes</strong>
+                        </p>
+                    </li>
+                    <li class="categories-list__items">
+                        <label class="setting-type__name" for="long-break">Long break</label>
+                        <div class="setting-type__amount--wrapper">
+                            <button class="button--amount-minus">-</button>
+                            <input class="setting-type__amount" type="number" value="30" id="long-break" step="5"
+                                min="15" max="30">
+                            <button class="button--amount-plus">+</button>
+                        </div>
+                        <p class="setting-type__description">Please select a value between 15 and 30
+                            <strong class="settings-type__last-word">minutes</strong>
+                        </p>
+                    </li>
+                </ul>
+                <div class="cycle">
+                    <h3 class="cycle__title">Your cycle</h3>
+                    <div class="cycle__time-top">
+                        <div class="time-top-null"></div>
+                        <div class="time-top-center"></div>
+                        <div class="time-top-end"></div>
+                    </div>
+                    <div class="cycle__image">
+                    </div>
+                    <div class="cycle__time-bottom">
+                        <div class="time-bottom-hour"></div>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <button class="button button--goToTask">Go to Tasks</button>
+                    <button class="button button--save">Save</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/bundle.js"></script>
+</body>
+
+</html>

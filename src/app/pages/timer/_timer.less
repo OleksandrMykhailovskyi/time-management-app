@@ -1,0 +1,235 @@
+.page--timer{
+    .menu{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        position: static;
+        right: 0;
+    }
+}
+
+.timer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.timer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.timer-content__name{
+    .styleForFont('Roboto', 2rem, @white, 500, 2.25rem);
+    margin: 0;
+}
+
+.timer-content__desctiption{
+    .styleForFont('Roboto', 1.25rem, @white, 400, 1.5rem);
+    padding: 1.375rem 0 2rem;
+    margin: 0;
+}
+
+.timer-content__pomadoros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 36rem;
+    border: none;
+    padding-bottom: 0.4rem;
+}
+
+.timer-content__pomadoros-img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.timer-content__plus{
+    .icon-style(1rem);
+    .icon::before{
+        color: @white;
+    };
+}
+
+.timer-circle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.timer-circle__arrow{
+    width: 2.3125rem;
+    height: 4.375rem;
+    font-size: 3rem;
+    .icon-style(2.3125rem);
+}
+
+.timer-circle__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 25rem;
+    height: 25rem;
+}
+
+.timer-circle__figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15.625rem;
+    height: 15.625rem;
+    // border: solid 5px #FFA841;
+    border-radius: 50%;
+    position: relative;
+}
+
+.timer-circle__work{
+    .timerBorder(@work);
+}
+
+.timer-circle__education{
+    .timerBorder(@education);
+}
+
+.timer-circle__hobby{
+    .timerBorder(@hobby);
+}
+
+.timer-circle__sport{
+    .timerBorder(@sport);
+}
+
+.timer-circle__other{
+    .timerBorder(@other);
+}
+
+.timer-circle__figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15.625rem;
+    height: 15.625rem;
+    // border: solid 5px #FFA841;
+    border-radius: 50%;
+    position: relative;
+}
+
+.timer-circle__text{
+    .styleForFont('PT Sans', 1.625rem, @white, 400, 2rem);
+}
+
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+
+.time__minutes{
+    .styleForFont('Roboto', 6.25rem, @white, 400, 4.87rem);
+}
+
+.time__title, .time__break{
+    .styleForFont('Roboto', 1.5rem, @white, 400, 1.5rem);
+    margin:0;
+}
+
+.timer-buttons{
+    margin-top: 7rem;
+    .md({
+        margin-top: 0;
+    })
+}
+
+.timer-buttons--two-items{
+    .buttons-two-items--start-finish{
+        .mixin-2-buttons(@low-green, @dark-blue);
+    }
+    .buttons-two-items--fail-finish{
+        .mixin-2-buttons(@urgent-importance-urgency, @low-green);
+    }
+}
+
+.timer-buttons--one-item{
+    .mixin-1-button(@low-green);
+}
+
+.buttons-two-items{
+    text-align: center;
+}
+
+.button--fail-pomodoro{
+    background-color: @urgent-importance-urgency;
+}
+
+.button--finish-pomodoro, .button--start-pomodoro{
+    background-color: @low-green;
+}
+
+.button--finish-task{
+    background-color: @education;
+}
+
+.timer-buttons--one-item .button--start-task, .timer-buttons--one-item .button--start-pomodoro{
+    background-color: @low-green;
+    display: block;
+    margin: 0 auto;
+    width: auto;
+}
+
+.ui-tooltip{
+    background: @secondary-text-color;
+    color: @background-color;    
+    font-weight: 700;
+    padding: 10px;
+    display: inline-block;
+}
+
+.ui-tooltip-content::after, .ui-tooltip-content::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    display: block;
+    // right: 100px;
+}
+
+.ui-tooltip-content::before {
+    top: -10px;
+    border-color: @background-color transparent;
+    border-width: 0 10px 10px;
+}
+
+.ui-tooltip-content::after {
+    top: -8px;
+    border-color: @secondary-text-color transparent;
+    border-width: 0 10px 10px;
+}
+
+.ui-helper-hidden-accessible{
+    display: none;
+}
+
+.timer-circle__svg {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.circle_animation {
+    stroke-dasharray: 597; /* this value is the pixel circumference of the circle */
+    stroke-dashoffset: 597;
+    transition: all 1s linear;
+}
+
+.circle_animation--full{
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+    transition: none;
+}

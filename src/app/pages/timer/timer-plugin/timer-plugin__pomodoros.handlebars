@@ -1,0 +1,17 @@
+<div class="timer-content__pomadoros">
+    {{!-- if there is pomodoroStatuses field - the values from the array--}}
+    {{#each this.cardObject.pomodoroStatuses}}
+    {{#ifCond this '==' 'failed'}}
+    <img src="./../images/tomato-failed.svg" alt="failed-tomato" class="timer-content__pomadoros-img">
+    {{/ifCond}}
+    {{#ifCond this '==' 'success'}}
+    <img src="./../images/fill-tomato.svg" alt="filled-tomato" class="timer-content__pomadoros-img">
+    {{/ifCond}}
+    {{#ifCond this '==' 'not set'}}
+    <img src="./../images/empty-tomato.svg" alt="empty-tomato" class="timer-content__pomadoros-img">
+    {{/ifCond}}
+    {{/each}}
+    <a href="#" class="timer-content__plus">
+        <span class="icon icon-add" data-id={{this.cardObject.fbID}}></span>
+    </a>
+</div>

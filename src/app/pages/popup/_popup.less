@@ -1,0 +1,318 @@
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 100;
+    &-body{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.625rem 0.625rem;
+        z-index: 100;
+        .xs({
+            position: absolute;
+            top: 1.875rem;
+            left: 50%;
+            width: 32.5rem;
+            transform: translateX(-50%);
+        })
+    }
+
+    &-content{
+        width: 100%;
+        height: 100%;
+        background-color: @background-color;
+
+        &__nav{
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 1.5rem;
+            &-ul{
+                margin: 0;
+                padding: 0 1rem;
+                list-style-type: none;
+                font-size: 1.5rem;
+                color: @secondary-text-color;
+            }
+            &-icon{
+                cursor: pointer;
+            }
+        }
+
+        &__link{
+            .icon-style(1.5rem);
+        }
+
+        &__items{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3.375rem 1.5rem;
+            font-family: 'Roboto', sans-serif;
+            .md({
+                padding-top: 0;
+            });
+
+            &-title{
+                .styleForFont('Roboto', 1.75rem, @white, 700, 1.75rem);
+                letter-spacing: .7px;
+                margin: 0;
+            }
+            &-form{
+                padding-bottom: 1rem;
+                width: 36rem;
+                height: 4.25rem;
+                border-bottom: solid 1px @secondary-text-color;
+                margin-bottom: 20px;
+                .xs({
+                        width: 26.5rem;
+                    }
+                );
+            }
+            &-message{
+                .styleForFont('Roboto', 2.25rem, @secondary-text-color, 300, 3rem);
+                padding: 13rem 6rem 10rem 6rem;
+                text-align: center;
+                margin: 0;
+            }
+        }
+    }
+    &-message{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 164px;
+        padding-left: 117px;
+        padding-right: 117px;
+        padding-bottom: 130px;
+        align-items: center;
+        text-align: center;
+    }
+    &-buttons{
+        width: 100%;
+        &--two-items{
+            .buttons-two-items--cancel-remove{
+                .mixin-2-buttons(@education, @urgent-importance-urgency);
+            }
+        }
+    }
+}
+
+.items{
+    &-title__name{
+        .styleForFont("Roboto", 1.5rem, @secondary-text-color, 700, 1.25rem);
+    }
+    &-form{
+        &__description{
+            text-transform: uppercase;
+            .styleForFont("Roboto", 1rem, @secondary-text-color, 400, 1.25rem);
+        }
+        &__value{
+            align-self: center;
+            text-align: left;
+            border: none;
+            background-color: @background-color;
+            outline: none;
+            .styleForFont("Roboto", 1.25rem, @secondary-text-color, 400, 1.5rem);
+        }
+        &__tomato{
+            display: flex;
+            text-align: left;
+            border-bottom: solid 1px @secondary-text-color;
+            .styletomatoimg;
+            &-img{
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+            &-radio{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-right: 20px;
+                &-name{
+                    margin-left: 10px;
+                    .styleForFont("Roboto", 1rem, @secondary-text-color, 400, 1.25rem);
+                }
+            }
+        }
+    }
+}
+
+//hover-effect
+.items-form{
+    &__description:hover{
+        color: @silver;
+    }
+    &__tomato-radio-name:hover{
+        color: @silver;
+    }
+}
+.icon-close:hover::before{
+    color: @silver;
+}
+.icon-check:hover::before{
+    color: @silver;
+}
+
+.work-checkbox{
+    .checkboxes-style(@work);
+}
+.education-checkbox{
+    .checkboxes-style(@education);
+}
+.sport-checkbox{
+    .checkboxes-style(@sport);
+}
+.hobby-checkbox{
+    .checkboxes-style(@hobby);
+}
+.other-checkbox{
+    .checkboxes-style(@other);
+}
+.urgent-checkbox{
+    .checkboxes-style(@urgent-importance-urgency);
+}
+.high-checkbox{
+    .checkboxes-style(@high-importance-urgency);
+}
+.middle-checkbox{
+    .checkboxes-style(@middle-importance-urgency);
+}
+.low-checkbox{
+    .checkboxes-style(@low-importance-urgency);
+}
+
+.check__input--estimation{
+    position: relative;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+
+.check__input--estimation:before {
+    visibility: visible;
+    content: '';
+    background: url('../../../assets/images/empty-tomato.svg') no-repeat;
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.check__input--estimation:checked:before {
+    visibility: visible;
+    content: '';
+    background: url('../../../assets/images/fill-tomato.svg') no-repeat;
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.ui-datepicker {
+    width: 300px;
+    height: 300px;
+    margin: 5px auto 0;
+}
+
+.ui-datepicker table {
+    width: 100%;
+}
+
+.ui-datepicker-header {
+    background-color: transparent;
+    color: @white;
+}
+
+.ui-datepicker-title {
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+.ui-datepicker-prev {
+    float: left;
+    cursor: pointer;
+    background-position: center -30px;
+}
+
+.ui-datepicker-next {
+    float: right;
+    cursor: pointer;
+    background-position: center 0px;
+}
+
+.ui-datepicker th {
+    background-color:#808080;
+    text-transform: uppercase;
+    font-size: 0.5rem;
+    color: @white;
+}
+
+.ui-datepicker tbody td {
+    padding: 0;
+}
+
+.ui-datepicker tbody td:last-child {
+    border-right: 0px;
+}
+
+.ui-datepicker tbody tr {
+    border-bottom: 1px solid #bbb;
+}
+
+.ui-datepicker tbody tr:last-child {
+    border-bottom: 0px;
+}
+
+.ui-datepicker a {
+    text-decoration: none;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: @white;
+}
+
+.ui-datepicker-calendar .ui-state-default {
+    background: linear-gradient(#999999, #737373);
+    color:#ffffff;
+    height:40px;
+    width:40px;
+}
+
+.ui-datepicker-calendar .ui-state-hover {
+    background: #33adff;
+    color: #FFFFFF;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    background: #33adff;
+    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1);
+    color: #e0e0e0;
+    text-shadow: 0px 1px 0px #4d7a85;
+    border: 1px solid #55838f;
+    position: relative;
+    margin: -1px;
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+    background: #D6E4BE;
+    color: #000;
+}
+
+.hasDatepicker{
+    background: transparent;
+    border: 0;
+    .styleForFont("Roboto", 1rem, @secondary-text-color, 400, 1.25rem);
+}

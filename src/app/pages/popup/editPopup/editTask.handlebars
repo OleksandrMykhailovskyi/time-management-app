@@ -1,0 +1,102 @@
+<body>
+    <div class="popup">
+        <div class="popup-body">
+            <div class="popup-content">
+                <nav class="popup-content__nav">
+                    <ul class="popup-content__nav-ul">
+                        <li class="popup-content__nav-icon--close icon-close" id="icon-close--edit-task"></li>
+                    </ul>
+                    <ul class="popup-content__nav-ul">
+                        <li class="popup-content__nav-icon--check icon-check"></li>
+                    </ul>
+                </nav>
+                <div class="popup-content__items">
+                    <div class="popup-content__items-title">
+                        <p class="items-title__name">Edit task</p>
+                    </div>
+                    <div class="popup-content__items-form">
+                        <p class="items-form__description">Title</p>
+                        <input class="items-form__value" type="text" value="" placeholder="Add title here" name='title'>
+                    </div>
+                    <div class="popup-content__items-form">
+                        <p class="items-form__description">Description</p>
+                        <input class="items-form__value" type="text" value="" placeholder="Add description here"
+                            name='description'>
+                    </div>
+                    <div class="popup-content__items-form">
+                        <p class="items-form__description">Category</p>
+                        <div class="items-form__tomato">
+                            <div class="items-form__tomato-radio work-checkbox">
+                                <input class="check__input" type="radio" name="category" value="work">
+                                <p class="items-form__tomato-radio-name">Work</p>
+                            </div>
+                            <div class="items-form__tomato-radio education-checkbox">
+                                <input class="check__input" type="radio" name="category" value="education">
+                                <p class="items-form__tomato-radio-name">Education</p>
+                            </div>
+                            <div class=" items-form__tomato-radio sport-checkbox">
+                                <input class="check__input" type="radio" name="category" value="sport">
+                                <p class="items-form__tomato-radio-name">Sport</p>
+                            </div>
+                            <div class="items-form__tomato-radio hobby-checkbox">
+                                <input class="check__input" type="radio" name="category" value="hobby">
+                                <p class="items-form__tomato-radio-name">Hobby</p>
+                            </div>
+                            <div class="items-form__tomato-radio other-checkbox">
+                                <input class="check__input" type="radio" name="category" value="other">
+                                <p class="items-form__tomato-radio-name">Other</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-content__items-form">
+                        <div id="datepicker"></div>
+                        <p class="items-form__description">Deadline</p>
+                        <label for="datePick"></label>
+                        <input type="text" id="datePick">
+                    </div>
+                    <div class="popup-content__items-form">
+                        <p class="items-form__description">Estimation</p>
+                        <div class="items-form__tomato">
+                            <label class="items-form__tomato-radio work-checkbox">
+                                <input class="check__input--estimation" type="radio" name="estimation" value="1">
+                            </label>
+                            <label class="items-form__tomato-radio work-checkbox">
+                                <input class="check__input--estimation" type="radio" name="estimation" value="2">
+                            </label>
+                            <label class="items-form__tomato-radio work-checkbox">
+                                <input class="check__input--estimation" type="radio" name="estimation" value="3">
+                            </label>
+                            <label class="items-form__tomato-radio work-checkbox">
+                                <input class="check__input--estimation" type="radio" name="estimation" value="4">
+                            </label>
+                            <label class="items-form__tomato-radio work-checkbox">
+                                <input class="check__input--estimation" type="radio" name="estimation" value="5">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="popup-content__items-form">
+                        <p class="items-form__description">Priority</p>
+                        <div class="items-form__tomato">
+                            <div class="items-form__tomato-radio urgent-checkbox">
+                                <input class="check__input" type="radio" name="priority" value="urgent">
+                                <p class="items-form__tomato-radio-name">Urgent</p>
+                            </div>
+                            <div class="items-form__tomato-radio high-checkbox">
+                                <input class="check__input" type="radio" name="priority" value="high">
+                                <p class="items-form__tomato-radio-name">High</p>
+                            </div>
+                            <div class="items-form__tomato-radio middle-checkbox">
+                                <input class="check__input" type="radio" name="priority" value="middle">
+                                <p class="items-form__tomato-radio-name">Middle</p>
+                            </div>
+                            <div class="items-form__tomato-radio low-checkbox">
+                                <input class="check__input " type="radio" name="priority" value="low">
+                                <p class="items-form__tomato-radio-name">Low</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

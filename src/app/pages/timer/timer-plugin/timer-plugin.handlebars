@@ -1,0 +1,38 @@
+<div class="timer-circle">
+    <a href="#" class="timer-circle__arrow timer-circle__arrow--left" title="Go to global list">
+        {{#ifCond this.menu '==' 'arrows-all'}}
+        <span class="icon icon-arrow-left"></span>
+        {{/ifCond}}
+        {{#ifCond this.menu '==' 'arrows-left'}}
+        <span class="icon icon-arrow-left" data-id={{this.fbID}}></span>
+        {{/ifCond}}
+    </a>
+    <div class="timer-circle__content">
+        <div class="timer-circle__figure timer-circle__{{this.category}}">
+            <div class="item html">
+                <div class="time">
+                    {{#ifCond this.phase '==' 'text'}}
+                    <p class="timer-circle__text">{{this.content}}</p>
+                    {{/ifCond}}
+                    {{#ifCond this.phase '==' 'iteration'}}
+                    <span class="time__break" {{this.breakShow}}>BREAK</span>
+                    <span class="time__minutes">0</span>
+                    <span class="time__title">min</span>
+                    {{/ifCond}}
+                </div>
+                <svg width="220" height="220" xmlns="http://www.w3.org/2000/svg" class="timer-circle__svg">
+                    <g>
+                        <title>Layer 1</title>
+                        <circle id="circle" class="circle_animation circle_animation--wrapper" r="95" cy="110" cx="110"
+                            stroke-width="30" stroke="#8DA5B8" fill="none" />
+                    </g>
+                </svg>
+                </div>
+                </div>
+    </div>
+    <a class="timer-circle__arrow timer-circle__arrow--right" title="Go to Reports">
+        {{#ifCond this.menu '==' 'arrows-all'}}
+        <span class="icon icon-arrow-right" data-id={{this.fbID}}></span>
+        {{/ifCond}}
+    </a>
+</div>

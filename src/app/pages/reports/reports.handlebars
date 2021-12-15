@@ -1,0 +1,28 @@
+<body>
+    <section class="page--report">
+        <h1 class="title">Report</h1>
+        <div class="reports-wrapper">
+            <ul class="report-header toggle-list">
+                {{#each days}}
+                <li class="toggle-list__item">
+                    <a href="#" class="toggle-list__link toggle-list__link--{{this}}">{{this}}</a>
+                    </li>
+                {{/each}}
+            </ul>
+            <div class="report-content">
+                <a href="#" class="report-content__arrow" title="Go to global list">
+                    <span class="icon icon-arrow-left"></span>
+                </a>
+                <div class="report-content-diagram" id="highcharts-container">
+                </div>
+                </div>
+                <ul class="report-footer toggle-list">
+                    {{#each links}}
+                    <li class="toggle-list__item">
+                    <a href="#" class="toggle-list__link toggle-list__link--{{this}} toggle-list__link--bottom">{{this}}</a>
+                    </li>
+                    {{/each}}
+                    </ul>
+        </div>
+    </section>
+</body>

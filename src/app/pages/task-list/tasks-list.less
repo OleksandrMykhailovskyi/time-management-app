@@ -1,0 +1,456 @@
+.page--task-list{
+    .wrapper{
+        .lg({
+            margin: 2.75rem 4rem;
+        })
+    }
+
+    .header{
+        &--scroll-down{
+            justify-content: flex-end;
+            padding: 2.75rem;
+        }
+    }
+    
+    .title{
+        &-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .styleForFont('Roboto', 1rem, @white, 500, 2rem);
+        }
+        &-name{
+            display: inline-block;
+        }
+        &-plus{
+            margin-left: 1rem;
+            text-decoration: none;
+            .styleForFont('Roboto', 2rem, @white, 500, 2rem);
+        }
+        // &::after{
+        //     position: absolute;
+        //     content: '+';
+        //     right: -2rem;
+        //     cursor: pointer;
+        //     .md({
+        //         right: 35%;
+        //     });
+        //     .lg({
+        //         right: 38%;
+        //     });
+        // }
+    }
+
+    .menu__item:first-child{
+        position: relative;
+        &::after{
+            position: absolute;
+            content: url('../../../assets/images/Counter.png');
+            top: 50%;
+        }
+    }
+
+    .toggle-list__item{
+        padding: 0 1rem;
+        position: relative;
+        &:first-child{
+            padding-left: 0;
+        }
+        &:last-child{
+            padding-right: 0;
+        }
+        &::after{
+            position: absolute;
+            content: '|';
+            right: 0;
+        }
+        &:last-child::after{
+            display: none;
+        }
+    }
+
+    .global-list__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0;
+        .toggle-list{
+            flex-basis: auto;
+            padding-left: 0;
+            margin: 0;
+            .md({
+                position: static;
+            });
+        }
+    }
+
+    .global-list-title{
+        display: flex;
+        align-items: center;
+    }
+
+    .global-list-title__name{
+        margin: 0 1rem 0 0;
+        .styleForFont('PT Sans', 1.5rem, @secondary-text-color, 700, 1.5rem);
+    }
+
+    .global-list-title__link{
+        & .icon::before{
+            font-size: 1rem;
+        }
+    }
+}
+
+.tasks-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        max-width: 1224px;
+        
+    }
+    //the styles for the category stripe at the left
+    &__categories--work{
+        .category-border-left-color(@work);
+    }
+    &__categories--education{
+        .category-border-left-color(@education);
+    }
+    &__categories--sport{
+        .category-border-left-color(@sport);
+    }
+    &__categories--hobby{
+        .category-border-left-color(@hobby);
+    }
+    &__categories--other{
+        .category-border-left-color(@other);
+    }
+    &__category-name{
+        .task-title(@work);
+        position: relative;
+        padding-left: 1.5rem;
+        &::before{
+            position: absolute;
+            content: url('../../../assets/images/ring-work.png');
+            left: 0;
+            top: 10%;
+        }
+    }
+    &__category--wrapper{
+        .border-left-color(@work);
+    }
+}
+
+.cells{
+    margin-bottom: 0.75rem;
+    .cells__item{
+        display: flex;
+        align-items: center;
+        background-color: @white;
+        box-shadow: 0px 5px 8.3px rgba(34, 56, 73, .3);
+        padding: 0;
+        position: relative;
+        justify-content: space-between;
+        .cells__status{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0;
+            height: 100%;
+            min-width: 88px;
+        }
+    
+        .cells__status--date, .cells__status--month{
+            .styleForFont('PT Sans', 1.75rem, @secondary-text-color, 700, 1rem);
+            margin: 0;
+        }
+    
+        .cells__status--month{
+            text-transform: uppercase;
+            font-size: 0.6875rem;
+            .styleForFont('Roboto', 0.6875rem, @secondary-text-color, 700, 1rem)
+        }
+    
+        .cells-content__title{
+            margin: 0 ;
+        }
+
+        .cells-content__wrapper{
+            padding: 0 2rem;
+            .sm({
+                min-width: 400px;
+            });
+            .md({
+                min-width: 600px;
+            });
+            .lg({
+                min-width: 860px;
+            });
+        }
+    
+        .cells-content__text{
+            .styleForFont ('Roboto', 1rem, @secondary-text-color, 400, 1.375rem);
+            margin-bottom: 0;
+            color: @secondary-text-color;
+        }
+
+        .cells-navs{
+            min-width: 120px;
+        }
+    
+        .cells-navs__link{
+            margin-right: 1rem;
+            .icon-style(1.25rem);
+        }
+    
+        .cells__task-complexity{
+            .xs({
+                padding: 3.3rem 1.375rem;
+            });
+            .sm({
+                padding: 2.3rem 1.375rem;
+            });
+            .md({
+                padding: 1.5rem 1.375rem;
+            });
+            height: inherit;
+            position: relative;
+            cursor: pointer;
+            .icon::before{
+                font-size: 3rem;
+                color: @white;
+            }
+            // &::before{
+            //     position: absolute;
+            //     content: '3';
+            //     top: 38%;
+            //     right: 42%;
+            //     .styleForFont('PT Sans', 1.56rem, @white, 700, 1.56rem);
+            //     .xs({
+            //         top: 42%;
+            //     });
+            //     .sm({
+            //         top: 38%;
+            //     });
+            // }
+        }
+    }
+    .cells__task-complexity--1{
+        .mixinForEstimation('1');
+    }
+    .cells__task-complexity--2{
+        .mixinForEstimation('2');
+    }
+    .cells__task-complexity--3{
+        .mixinForEstimation('3');
+    }
+    .cells__task-complexity--4{
+        .mixinForEstimation('4');
+    }
+    .cells__task-complexity--5{
+        .mixinForEstimation('5');
+    }
+    .cells__task-complexity--6{
+        .mixinForEstimation('6');
+    }
+    .cells__task-complexity--7{
+        .mixinForEstimation('7');
+    }
+    .cells__task-complexity--8{
+        .mixinForEstimation('8');
+    }
+    .cells__task-complexity--9{
+        .mixinForEstimation('9');
+    }
+    .cells__task-complexity--10{
+        .mixinForEstimation('10');
+    }
+    //classes for different priorities
+    .cells__urgent-priority{
+        .task-priority(@urgent-importance-urgency);
+    }
+    .cells__high-priority{
+        .task-priority(@high-importance-urgency);
+    }
+    .cells__middle-priority{
+        .task-priority(@middle-importance-urgency);
+    }
+    .cells__low-priority{
+        .task-priority(@low-importance-urgency);
+    }
+
+    //left-border category color
+    .border__work{
+        .border-left-color(@work);
+    }
+    .border__education{
+        .border-left-color(@education);
+    }
+    .border__hobby{
+        .border-left-color(@hobby);
+    }
+    .border__sport{
+        .border-left-color(@sport);
+    }
+    .border__other{
+        .border-left-color(@other);
+    }
+}
+
+.cells--overdue{
+    .cells__status--date, .cells__status--month{
+        color: @urgent-importance-urgency !important; 
+    }
+}
+
+// .cells--cross{
+//     .cells__status--date, .cells__status--month{
+//         display: none;
+//     }
+// }
+
+.cells--done{
+    .cells__item{
+        background-color: @done-task;
+    }
+    .cells-content__title{
+        text-decoration: line-through;
+    }
+}
+
+.customize-settings__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem;
+    text-align: center;
+    .sm({
+        padding-top: 4.5rem;
+    });
+    .button-wrapper{
+        margin-bottom: 0;
+        margin-top: auto;
+    }
+}
+
+.customize-settings__img{
+    width: 576px;
+    height: 350px;
+    cursor: pointer;
+}
+
+.customize-settings__title{
+    .styleForFont('Roboto', 2.25rem, @secondary-text-color, 300, 3rem);
+    padding: 2.5rem;
+    margin: 0;
+}
+
+.information-block{
+    margin: 3rem 0 4.75rem 0;
+}
+
+.information-block__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information-block__content-wrapper{
+    margin: 0 2.25rem 1.5rem 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information-block__content--first-row, .information-block__content--second-row{
+    .styleForFont('Roboto', 2.25rem, @secondary-text-color, 300, 3rem);
+    margin: 0;
+    text-align: center;
+}
+
+.information-block__link{
+    .icon-style(3.5rem);
+};
+
+// .cells--cross{
+//     .cells__item{
+//         .deadline-with-icon(@work);
+//     }
+// }
+
+//classes for the left cross block
+.cells-cross--work{
+    .deadline-with-icon(@work);
+}
+.cells-cross--education{
+    .deadline-with-icon(@education);
+}
+.cells-cross--sport{
+    .deadline-with-icon(@sport);
+}
+.cells-cross--hobby{
+    .deadline-with-icon(@hobby);
+}
+.cells-cross--other{
+    .deadline-with-icon(@other);
+}
+
+//classes for the left cross block
+.cells-trash--work{
+    .deadline-with-icon(@work);
+}
+.cells-trash--education{
+    .deadline-with-icon(@education);
+}
+.cells-trash--sport{
+    .deadline-with-icon(@sport);
+}
+.cells-trash--hobby{
+    .deadline-with-icon(@hobby);
+}
+.cells-trash--other{
+    .deadline-with-icon(@other);
+}
+
+// .cells--trashbox{
+//     .cells__item{
+//         .deadline-with-icon(@education);
+//     }
+// }
+
+.task-background-done{
+    background-color: @done-task !important;
+}
+
+.line-done{
+    text-decoration: line-through !important;
+}
+
+.estimation-done{
+    opacity: .8;
+}
+
+.section-category-work--title{
+    .sectionBeforeCategory(@work);
+}
+
+.section-category-education--title{
+    .sectionBeforeCategory(@education);
+}
+
+.section-category-sport--title{
+    .sectionBeforeCategory(@sport);
+}
+
+.section-category-hobby--title{
+    .sectionBeforeCategory(@hobby);
+}
+
+.section-category-other--title{
+    .sectionBeforeCategory(@other);
+}

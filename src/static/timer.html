@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Productivity app</title>
+</head>
+
+<body class="body page--timer">
+    <div class="wrapper">
+        <header class="header">
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <span class="icon icon-list"></span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <span class="icon icon-statistics"></span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <span class="icon icon-settings"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <section class="timer">
+                <div class="timer-content">
+                    <h3 class="timer-content__name">1. Creating a New Design</h3>
+                    <h4 class="timer-content__desctiption">Lorem ipsum dolor sit amet, consectetur adipisicing.
+                    </h4>
+                    <div class="timer-content__pomadoros">
+                        <img src="../../images/fill-tomato.svg" alt="filled-tomato"
+                            class="timer-content__pomadoros-img">
+                        <img src="../../images/fill-tomato.svg" alt="filled-tomato"
+                            class="timer-content__pomadoros-img">
+                        <img src="../../images/empty-tomato.svg" alt="empty-tomato"
+                            class="timer-content__pomadoros-img">
+                        <a href="#" class="timer-content__plus">
+                            <span class="icon icon-add"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="timer-circle">
+                    <a href="#" class="timer-circle__arrow">
+                        <span class="icon icon-arrow-left"></span>
+                    </a>
+                    <div class="timer-circle__content">
+                        <div class="timer-circle__figure">
+                            <div class="time">
+                                <span class="time__minutes">6</span>
+                                <span class="time__title">min</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timer-circle__arrow">
+                        <span class="icon icon-arrow-right"></span>
+                    </div>
+                </div>
+
+                <!-- two buttons with different colours -->
+
+                <div class="timer-buttons timer-buttons--two-items">
+                    <div class="timer-buttons__wrapper buttons-two-items--fail-finish">
+                        <button class="button">Start Pomodora</button>
+                        <button class="button">Finish Task</button>
+                    </div>
+
+                    <div class="timer-buttons__wrapper buttons-two-items--start-finish display--none">
+                        <button class="button">Start Pomodora</button>
+                        <button class="button">Finish Task</button>
+                    </div>
+                </div>
+
+                <!-- one button with the same color-->
+
+                <div class="timer-buttons timer-buttons--one-item display--none">
+                    <button class="button">Start</button>
+                </div>
+
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

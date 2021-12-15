@@ -1,0 +1,79 @@
+.popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+
+    &-body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.625rem 0.625rem;
+        .sm({
+            position: absolute;
+            top: 1.875rem;
+            left: 50%;
+            width: 32.5rem;
+            transform: translateX(-50%);
+        })
+    }
+
+    &-content{
+        width: 100%;
+        height: 100%;
+        background-color: @background-color;
+
+        &__nav {
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 1.5rem;
+
+            &-ul{
+                padding-right: 30px;
+                list-style-type: none;
+            }
+        }
+
+        &__link{
+            .icon-style(1.5rem);
+        }
+
+        &__items{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3.375rem 1.5rem;
+            font-family: 'Roboto', sans-serif;
+            .md({
+                padding-top: 0;
+            });
+
+            &-title {
+                .styleForFont('Roboto', 1.75rem, @white, 700, 1.75rem);
+                letter-spacing: .7px;
+                margin: 0;
+            }
+
+            &-message{
+                .styleForFont('Roboto', 2.25rem, @secondary-text-color, 300, 3rem);
+                padding: 13rem 6rem 10rem 6rem;
+                text-align: center;
+                margin: 0;
+            }
+        }
+    }
+
+    &-buttons{
+        width: 100%;
+
+        &--two-items{
+            .buttons-two-items--cancel-remove{
+                .mixin-2-buttons(@education, @urgent-importance-urgency);
+            }
+        }
+    }
+}

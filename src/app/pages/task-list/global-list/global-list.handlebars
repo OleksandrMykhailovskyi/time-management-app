@@ -1,0 +1,54 @@
+<body>
+    <div class="global-list__wrapper">
+        <div class="global-list-title">
+            <h3 class="global-list-title__name">Global list</h3>
+            <a href="#" class="global-list-title__link toggle-list__link">
+                <span class="icon icon-global-list-arrow-down"></span>
+            </a>
+        </div>
+        <ul class="toggle-list toggle-list--global-filter">
+            <li class="toggle-list__item toggle-list__item--global-filter">
+                <a href="#" class="toggle-list__link toggle-list__link--global-filter toggle-list__link--all">All</a>
+            </li>
+            <li class="toggle-list__item toggle-list__item--global-filter">
+                <a href="#"
+                    class="toggle-list__link toggle-list__link--global-filter toggle-list__link--urgent">Urgent</a>
+            </li>
+            <li class="toggle-list__item toggle-list__item--global-filter">
+                <a href="#" class="toggle-list__link toggle-list__link--global-filter toggle-list__link--high">High</a>
+            </li>
+            <li class="toggle-list__item toggle-list__item--global-filter">
+                <a href="#"
+                    class="toggle-list__link toggle-list__link--global-filter toggle-list__link--middle">Middle</a>
+            </li>
+            <li class="toggle-list__item toggle-list__item--global-filter">
+                <a href="#" class="toggle-list__link toggle-list__link--global-filter toggle-list__link--low">Low</a>
+            </li>
+        </ul>
+    </div>
+    {{!-- there is the block with the tasks items --}}
+    <section class="tasks-block">
+        <div class="tasks-block__wrapper">
+            <div class="tasks-block__categories--work">
+                <div class="section-category-title section-category-work--title" hidden>Work</div>
+                <div class="section-category-work--tasks"></div>
+            </div>
+            <div class="tasks-block__categories--education">
+                <div class="section-category-title section-category-education--title" hidden>Education</div>
+                <div class="section-category-education--tasks"></div>
+            </div>
+            <div class="tasks-block__categories--sport">
+                <div class="section-category-title section-category-sport--title" hidden>Sport</div>
+                <div class="section-category-sport--tasks"></div>
+            </div>
+            <div class="tasks-block__categories--hobby">
+                <div class="section-category-title section-category-hobby--title" hidden>Hobby</div>
+                <div class="section-category-hobby--tasks"></div>
+            </div>
+            <div class="tasks-block__categories--other">
+                <div class="section-category-title section-category-other--title" hidden>Other</div>
+                <div class="section-category-other--tasks"></div>
+            </div>
+        </div>
+    </section>
+</body>

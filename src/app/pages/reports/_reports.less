@@ -1,0 +1,108 @@
+.page--report{
+    .toggle-list{
+        justify-content: center;
+        padding-left: 0;
+    }
+    .toggle-list__item{
+        padding: 0 1rem;
+        position: relative;
+        &:first-child{
+            padding-left: 0;
+        }а
+        &:last-child{
+            padding-right: 0;
+        }
+        &::after{
+            position: absolute;
+            content: '|';
+            right: 0;
+        }
+        &:last-child::after{
+            display: none;
+        }
+    }
+    .report-content__arrow{
+        .icon-style(2.7rem);
+        position: absolute;
+        top: 50%;
+    }
+}
+
+.report-content{
+    position: relative;
+}
+
+.report-content-btn{
+    width: 2.3rem;
+    height: 4.375rem;
+    font-size: 3rem;
+}
+
+.report-content-diagram{
+    text-align: center;
+    padding: 6rem 0;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.highcharts-background{
+    fill: transparent;
+}
+
+.highcharts-color-0{
+    fill: @urgent-importance-urgency;
+}
+
+.highcharts-series-0 .highcharts-point{
+    fill: @urgent-importance-urgency;
+}
+
+.highcharts-color-1{
+    fill: @high-importance-urgency;
+}
+
+.highcharts-series-1 .highcharts-point{
+    fill: @high-importance-urgency;
+}
+
+.highcharts-color-2{
+    fill: @middle-importance-urgency;
+}
+
+.highcharts-series-2 .highcharts-point{
+    fill: @middle-importance-urgency;
+}
+
+.highcharts-color-3{
+    fill: @low-importance-urgency;
+}
+
+.highcharts-series-3 .highcharts-point{
+    fill: @low-importance-urgency;
+}
+
+.highcharts-color-4{
+    fill: @secondary-text-color;
+}
+
+.highcharts-series-4 .highcharts-point{
+    fill: @secondary-text-color;
+}
+
+.highcharts-axis-labels text{
+    color: @white !important;
+    fill: @white !important;
+}
+
+.highcharts-legend-item text{
+    color: @secondary-text-color !important;
+    fill: @secondary-text-color !important;
+}
+
+.highcharts-credits{
+    display: none;
+}
+
+.highcharts-exporting-group{
+    display: none;
+}

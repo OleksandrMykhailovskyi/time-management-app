@@ -1,0 +1,46 @@
+.page--report{
+    .toggle-list{
+        justify-content: center;
+        padding-left: 0;
+    }
+    .toggle-list__item{
+        padding: 0 1rem;
+        position: relative;
+        &:first-child{
+            padding-left: 0;
+        }
+        &:last-child{
+            padding-right: 0;
+        }
+        &::after{
+            position: absolute;
+            content: '|';
+            right: 0;
+        }
+        &:last-child::after{
+            display: none;
+        }
+    }
+    .report-content__arrow{
+        .icon-style(2.7rem);
+    }
+}
+
+.report-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.report-content-btn{
+    width: 2.3rem;
+    height: 4.375rem;
+    font-size: 3rem;
+}
+
+.report-content-diagram{
+    padding: 13.875rem 0 11.875rem 0;
+    .md({
+        padding: 8.75rem 0 11.875rem 0;
+    })
+}

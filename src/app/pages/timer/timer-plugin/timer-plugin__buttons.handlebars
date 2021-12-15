@@ -1,0 +1,22 @@
+{{#ifCond this.buttons '==' 'startPomodora'}}
+<div class="timer-buttons timer-buttons--one-item">
+    <button class="button button--start-task" data-id={{this.fbID}}>Start</button>
+</div>
+{{/ifCond}}
+{{#ifCond this.buttons '==' 'iteration'}}
+<div class="timer-buttons timer-buttons__wrapper buttons-two-items">
+    <button class="button button--fail-pomodoro" data-id={{this.fbID}}>Fail Pomodora</button>
+    <button class="button button--finish-pomodoro" data-id={{this.fbID}}>Finish Pomodora</button>
+</div>
+{{/ifCond}}
+{{#ifCond this.buttons '==' 'break'}}
+<div class="timer-buttons timer-buttons--one-item">
+    <button class="button button--start-pomodoro" data-id={{this.fbID}}>Start Pomodora</button>
+</div>
+{{/ifCond}}
+{{#ifCond this.buttons '==' 'break is over'}}
+<div class="timer-buttons timer-buttons__wrapper buttons-two-items">
+    <button class="button button--start-pomodoro" data-id={{this.fbID}}>Start Pomodora</button>
+    <button class="button button--finish-task" data-id={{this.fbID}}>Finish Task</button>
+</div>
+{{/ifCond}}

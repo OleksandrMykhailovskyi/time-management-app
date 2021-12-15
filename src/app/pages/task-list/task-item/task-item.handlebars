@@ -1,0 +1,74 @@
+{{#each testArray}}
+<div class="cells {{status}}" id={{fbID}} data-status={{status}}>
+    {{#if_Status status 'Completed'}}
+    <form class="cells__item border__{{category}} cells__{{priority}}-priority task-background-done">
+        {{else}}
+    <form class="cells__item border__{{category}} cells__{{priority}}-priority">
+    {{/if_Status}}
+        <div class="cells__status">
+            {{#if_eq deadline}}
+            {{!-- icon with today --}}
+            <div class="cells__status--today">
+                <p class="cells__status--month">Today</p>
+            </div>
+            {{else}}
+            <div class="cells__status--date">
+                <p class="cells__status--date">{{getDay deadline}}</p>
+                <p class="cells__status--month">{{getMonth deadline}}</p>
+            </div>
+            {{/if_eq}}
+            {{!-- icon with the cross--}}
+            <div class="cells__deadline cells-cross--{{category}}" hidden='true'>
+                <a href="#" class="cells__deadline__link">
+                    <span class="icon icon-close"></span>
+                </a>
+            </div>
+            {{!-- icon with the trash--}}
+            <div class="cells__deadline cells-trash--{{category}}" hidden='true'>
+                <a href="#" class="cells__deadline__link">
+                    <span class="icon icon-trash"></span>
+                </a>
+            </div>
+        </div>
+        <div class="cells-content__wrapper">
+            {{#if_Status status 'Completed'}}
+            <h4 class="cells-content__title line-done">{{title}}</h4>
+            {{else}}
+            <h4 class="cells-content__title">{{title}}</h4>
+            {{/if_Status}}
+            <p class="cells-content__text">{{description}}</p>
+        </div>
+        <div class="cells-navs">
+            {{#if_Status status 'Completed'}}
+            {{else}}
+            {{#if_Status status 'Daily_List'}}
+            {{else}}
+            <a href="#" class="cells-navs__link">
+                <span class="icon icon-arrows-up cells-navs__link--arrows-up" data-id={{fbID}}></span>
+            </a>
+            {{/if_Status}}
+            <a href="#" class="cells-navs__link">
+                <span class="icon icon-edit cells-navs__link--edit" data-obj={{fbID}}></span>
+            </a>
+            <a href="#" class="cells-navs__link">
+                <span class="icon icon-trash cells-navs__link--trash" data-id={{fbID}}></span>
+            </a>
+            {{/if_Status}}
+        </div>
+        {{#if_Status status 'Completed'}}
+        <div class="cells__task-complexity cells__task-complexity--{{estimation}} estimation-done">
+            {{else}}
+        <div class="cells__task-complexity cells__task-complexity--{{estimation}}">
+        {{/if_Status}}
+            <span class="icon icon-tomato icon-tomato--goToTimer" data-id={{fbID}} data-status={{status}}></span>
+        </div>
+    </form>
+</div>
+{{/each}}
+
+{{!-- the left part of the item with the cross icon
+<div class="cells__deadline display--none">
+    <a href="#" class="cells__deadline__link">
+        <span class="icon icon-close"></span>
+    </a>
+</div> --}}

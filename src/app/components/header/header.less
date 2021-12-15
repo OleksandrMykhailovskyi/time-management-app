@@ -1,0 +1,30 @@
+.header{
+    position: fixed;
+    left: 0; right: 0;
+    top: 0;
+    padding: 2.5rem 1.5rem;
+    background-color: @background-color;
+    z-index: 99;
+    .md({
+        padding: 2.75rem;
+    });
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        .md({
+            position: relative;
+            justify-content: flex-end;
+        })
+        }
+        .md({
+            margin-bottom: 1.5rem;
+        });
+    }
+
+    .header--scroll-down{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0,0,0,.5);
+        padding: 0.625rem;
+    }

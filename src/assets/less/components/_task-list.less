@@ -1,0 +1,214 @@
+.page--task-list{
+    .wrapper{
+        .lg({
+            margin: 2.75rem 4rem;
+        })
+    }
+
+    .header{
+        &--scroll-down{
+            justify-content: flex-end;
+            padding: 2.75rem;
+        }
+    }
+    
+    .title{
+        &::after{
+            position: absolute;
+            content: '+';
+            right: -2rem;
+            .md({
+                right: 35%;
+            });
+            .lg({
+                right: 38%;
+            });
+        }
+    }
+
+    .menu__item:first-child{
+        position: relative;
+        &::after{
+            position: absolute;
+            content: url('../../images/Counter.png');
+            top: 50%;
+        }
+    }
+
+    .toggle-list__item{
+        padding: 0 1rem;
+        position: relative;
+        &:first-child{
+            padding-left: 0;
+        }
+        &:last-child{
+            padding-right: 0;
+        }
+        &::after{
+            position: absolute;
+            content: '|';
+            right: 0;
+        }
+        &:last-child::after{
+            display: none;
+        }
+    }
+
+    .global-list__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0;
+        .toggle-list{
+            flex-basis: auto;
+            padding-left: 0;
+            margin: 0;
+            .md({
+                position: static;
+            });
+        }
+    }
+
+    .global-list-title{
+        display: flex;
+        align-items: center;
+    }
+
+    .global-list-title__name{
+        margin: 0 1rem 0 0;
+        .styleForFont('PT Sans', 1.5rem, @secondary-text-color, 700, 1.5rem);
+    }
+
+    .global-list-title__link{
+        & .icon::before{
+            font-size: 1rem;
+        }
+    }
+}
+
+.tasks-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        max-width: 1440px;
+    }
+    &__category-name{
+        .task-title(@work);
+        position: relative;
+        padding-left: 1.5rem;
+        &::before{
+            position: absolute;
+            content: url('../../images/ring-work.png');
+            left: 0;
+            top: 10%;
+        }
+    }
+    &__category--wrapper{
+        .border-left-color(@work);
+    }
+}
+
+.cells{
+    margin-bottom: 0.75rem;
+    .cells__work--high-priority{
+        .task-cell-content(@high-importance-urgency, @high-importance-title);
+    }
+    .cells__work--middle-priority{
+        .task-cell-content(@middle-importance-urgency, @middle-importance-title);
+    }
+    .cells__education--urgent-priority{
+        .task-cell-content(@urgent-importance-urgency, @urgent-importance-title);
+        .border-left-color(@education);
+    }
+}
+
+.cells--overdue{
+    .cells__deadline--date, .cells__deadline--month{
+        color: @urgent-importance-title !important; 
+    }
+}
+
+.cells--cross{
+    .cells__deadline--date, .cells__deadline--month{
+        display: none;
+    }
+}
+
+.cells--done{
+    .cells__item{
+        background-color: @done-task;
+    }
+    .cells-content__title{
+        text-decoration: line-through;
+    }
+}
+
+.customize-settings__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem;
+    text-align: center;
+    .sm({
+        padding-top: 4.5rem;
+    });
+    .button-wrapper{
+        margin-bottom: 0;
+        margin-top: auto;
+    }
+}
+
+.customize-settings__img{
+    width: 576px;
+    height: 350px;
+    cursor: pointer;
+}
+
+.customize-settings__title{
+    .styleForFont('Roboto', 2.25rem, @secondary-text-color, 300, 3rem);
+    padding: 64px 80px 188px;
+    margin: 0;
+}
+
+.information-block{
+    margin: 3rem 0 4.75rem 0;
+}
+
+.information-block__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information-block__content-wrapper{
+    margin: 0 2.25rem 1.5rem 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information-block__content--first-row, .information-block__content--second-row{
+    .styleForFont('Roboto', 2.25rem, @secondary-text-color, 300, 3rem);
+    margin: 0;
+    text-align: center;
+}
+
+.information-block__link{
+    .icon-style(3.5rem);
+};
+
+.cells--cross{
+    .cells__item{
+        .deadline-with-icon(@work);
+    }
+}
+
+.cells--trashbox{
+    .cells__item{
+        .deadline-with-icon(@education);
+    }
+}

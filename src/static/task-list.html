@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Productivity app</title>
+</head>
+
+<body class="body page--task-list">
+    <div class="wrapper">
+        <header class="header">
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <span class="icon icon-trash"></span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <span class="icon icon-list"></span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <span class="icon icon-statistics"></span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            <span class="icon icon-settings"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main" id="root">
+            <h1 class="title">Daily Task List</h1>
+            <!-- section with tasks -->
+            <section class="section page--task-list__tasks">
+                <ul class="toggle-list">
+                    <li class="toggle-list__item">
+                        <a href="#" class="toggle-list__link">To Do</a>
+                    </li>
+                    <li class="toggle-list__item">
+                        <a href="#" class="toggle-list__link">Done</a>
+                    </li>
+                </ul>
+                <div class="information-block">
+                    <div class="information-block__wrapper">
+                        <div class="information-block__content-wrapper">
+                            <p class="information-block__content--first-row">Task added,</p>
+                            <p class="information-block__content--second-row">move it to the top 5 in daily task list
+                            </p>
+                        </div>
+                        <a href="#" class="information-block__link">
+                            <span class="icon icon-arrow_circle"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="global-list__wrapper">
+                    <div class="global-list-title">
+                        <h3 class="global-list-title__name">Global list</h3>
+                        <a href="#" class="global-list-title__link toggle-list__link">
+                            <span class="icon icon-global-list-arrow-down"></span>
+                        </a>
+                    </div>
+                    <ul class="toggle-list">
+                        <li class="toggle-list__item">
+                            <a href="#" class="toggle-list__link">All</a>
+                        </li>
+                        <li class="toggle-list__item">
+                            <a href="#" class="toggle-list__link">Urgent</a>
+                        </li>
+                        <li class="toggle-list__item">
+                            <a href="#" class="toggle-list__link">High</a>
+                        </li>
+                        <li class="toggle-list__item">
+                            <a href="#" class="toggle-list__link">Middle</a>
+                        </li>
+                        <li class="toggle-list__item">
+                            <a href="#" class="toggle-list__link">Low</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tasks-block">
+                    <div class="tasks-block__wrapper">
+                        <div class="tasks-block__category--wrapper">
+                            <h3 class="tasks-block__category-name">Work</h3>
+                            <div class="tasks-block__category-content">
+                                <div class="cells">
+                                    <div class="cells__item cells__work--high-priority">
+                                        <div class="cells__deadline">
+                                            <p class="cells__deadline--date">23</p>
+                                            <p class="cells__deadline--month">May</p>
+                                        </div>
+                                        <div class="cells-content__wrapper">
+                                            <h4 class="cells-content__title">Lorem ipsum amet</h4>
+                                            <p class="cells-content__text">Lorem ipsum dolor sit amet consectetur
+                                                adipisicing elit.
+                                                Perspiciatis natus illo, nihil quaerat eius facilis!</p>
+                                        </div>
+                                        <div class="cells-navs">
+                                            <a href="#" class="cells-navs__link">
+                                                <span class="icon icon-arrows-up"></span>
+                                            </a>
+                                            <a href="#" class="cells-navs__link">
+                                                <span class="icon icon-edit"></span>
+                                            </a>
+                                            <a href="#" class="cells-navs__link">
+                                                <span class="icon icon-trash"></span>
+                                            </a>
+                                        </div>
+                                        <div class="cells__task-complexity">
+                                            <span class="icon icon-tomato"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cells">
+                                    <div class="cells__item cells__work--middle-priority">
+                                        <div class="cells__deadline">
+                                            <p class="cells__deadline--date">23</p>
+                                            <p class="cells__deadline--month">May</p>
+                                        </div>
+                                        <div class="cells-content__wrapper">
+                                            <h4 class="cells-content__title">Lorem ipsum amet</h4>
+                                            <p class="cells-content__text">Lorem ipsum dolor sit amet consectetur
+                                                adipisicing elit.
+                                                Perspiciatis natus illo, nihil quaerat eius facilis!</p>
+                                        </div>
+                                        <div class="cells-navs">
+                                            <a href="#" class="cells-navs__link">
+                                                <span class="icon icon-arrows-up"></span>
+                                            </a>
+                                            <a href="#" class="cells-navs__link">
+                                                <span class="icon icon-edit"></span>
+                                            </a>
+                                            <a href="#" class="cells-navs__link">
+                                                <span class="icon icon-trash"></span>
+                                            </a>
+                                        </div>
+                                        <div class="cells__task-complexity">
+                                            <span class="icon icon-tomato"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cells">
+                            <div class="cells__item cells__education--urgent-priority">
+                                <div class="cells__deadline">
+                                    <p class="cells__deadline--date">23</p>
+                                    <p class="cells__deadline--month">May</p>
+                                </div>
+                                <div class="cells-content__wrapper">
+                                    <h4 class="cells-content__title">Lorem ipsum amet</h4>
+                                    <p class="cells-content__text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Perspiciatis natus illo, nihil quaerat eius facilis!</p>
+                                </div>
+                                <div class="cells-navs">
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-arrows-up"></span>
+                                    </a>
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-edit"></span>
+                                    </a>
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-trash"></span>
+                                    </a>
+                                </div>
+                                <div class="cells__task-complexity">
+                                    <span class="icon icon-tomato"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cells cells--overdue">
+                            <div class="cells__item cells__education--urgent-priority">
+                                <div class="cells__deadline">
+                                    <p class="cells__deadline--date">23</p>
+                                    <p class="cells__deadline--month">May</p>
+                                </div>
+                                <div class="cells-content__wrapper">
+                                    <h4 class="cells-content__title">Lorem ipsum amet</h4>
+                                    <p class="cells-content__text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Perspiciatis natus illo, nihil quaerat eius facilis!</p>
+                                </div>
+                                <div class="cells-navs">
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-arrows-up"></span>
+                                    </a>
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-edit"></span>
+                                    </a>
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-trash"></span>
+                                    </a>
+                                </div>
+                                <div class="cells__task-complexity">
+                                    <span class="icon icon-tomato"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cells cells--cross">
+                            <div class="cells__item cells__education--urgent-priority">
+                                <div class="cells__deadline">
+                                    <a href="#" class="cells__deadline__link">
+                                        <span class="icon icon-close"></span>
+                                    </a>
+                                </div>
+                                <div class="cells-content__wrapper">
+                                    <h4 class="cells-content__title">Lorem ipsum amet</h4>
+                                    <p class="cells-content__text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Perspiciatis natus illo, nihil quaerat eius facilis!</p>
+                                </div>
+                                <div class="cells-navs">
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-arrows-up"></span>
+                                    </a>
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-edit"></span>
+                                    </a>
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-trash"></span>
+                                    </a>
+                                </div>
+                                <div class="cells__task-complexity">
+                                    <span class="icon icon-tomato"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cells cells--trashbox">
+                            <div class="cells__item cells__education--urgent-priority">
+                                <div class="cells__deadline">
+                                    <a href="#" class="cells__deadline__link">
+                                        <span class="icon icon-trash"></span>
+                                    </a>
+                                </div>
+                                <div class="cells-content__wrapper">
+                                    <h4 class="cells-content__title">Lorem ipsum amet</h4>
+                                    <p class="cells-content__text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Perspiciatis natus illo, nihil quaerat eius facilis!</p>
+                                </div>
+                                <div class="cells-navs">
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-arrows-up"></span>
+                                    </a>
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-edit"></span>
+                                    </a>
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-trash"></span>
+                                    </a>
+                                </div>
+                                <div class="cells__task-complexity">
+                                    <span class="icon icon-tomato"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cells cells--done">
+                            <div class="cells__item cells__education--urgent-priority">
+                                <div class="cells__deadline">
+                                    <p class="cells__deadline--date">23</p>
+                                    <p class="cells__deadline--month">May</p>
+                                </div>
+                                <div class="cells-content__wrapper">
+                                    <h4 class="cells-content__title">Lorem ipsum amet</h4>
+                                    <p class="cells-content__text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Perspiciatis natus illo, nihil quaerat eius facilis!</p>
+                                </div>
+                                <div class="cells-navs">
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-arrows-up"></span>
+                                    </a>
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-edit"></span>
+                                    </a>
+                                    <a href="#" class="cells-navs__link">
+                                        <span class="icon icon-trash"></span>
+                                    </a>
+                                </div>
+                                <div class="cells__task-complexity">
+                                    <span class="icon icon-tomato"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="notification">
+                <!-- notification messages -->
+                <div class="notication-list notification--info">
+                    <div class="notication-list__tomato-icon">
+                        <span class="icon icon-tomato-info"></span>
+                    </div>
+                    <div class="notication-title__wrapper">
+                        <h4 class="notication-list__title">This is just an info notification message!</h4>
+                    </div>
+                    <div class="notication-list__status">
+                        <span class="icon icon-close"></span>
+                    </div>
+                </div>
+                <!-- error messages -->
+                <div class="notication-list notification--error">
+                    <div class="notication-list__tomato-icon">
+                        <span class="icon icon-tomato-error"></span>
+                    </div>
+                    <div class="notication-title__wrapper">
+                        <h4 class="notication-list__title">Oops! An error has occurred</h4>
+                    </div>
+                    <div class="notication-list__status">
+                        <span class="icon icon-close"></span>
+                    </div>
+                </div>
+            </section>
+            <!-- section customize-settings-->
+
+            <section class="section customize-settings">
+                <div class="customize-settings__wrapper">
+                    <a href="#" class="customize-settings__link">
+                        <img class="customize-settings__img" src="../../images/tomato_settings.svg" alt="pomodoro">
+                    </a>
+                    <h2 class="customize-settings__title">As you visited site for a first time you can check and
+                        customize
+                        your default application settings</h2>
+                    <div class="button-wrapper">
+                        <button class="button button--goToTask">Skip</button>
+                        <button class="button button--save">Go to settings</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section first-task-->
+            <section class="first-task">
+                <div class="customize-settings__wrapper">
+                    <a href="#" class="customize-settings__link">
+                        <img class="customize-settings__img" src="../../images/tomato-add.svg" alt="pomodoro">
+                    </a>
+                    <div class="todo-message add-content">
+                        <h2 class="customize-settings__title">Add your first task</h2>
+                    </div>
+                </div>
+            </section>
+            <section class="no-task">
+                <div class="customize-settings__wrapper">
+                    <a href="#" class="customize-settings__link">
+                        <img class="customize-settings__img" src="../../images/tomato-addv02.svg" alt="pomodoro">
+                    </a>
+                    <div class="todo-message add-content">
+                        <h2 class="customize-settings__title">You don’t have any tasks left. Add new tasks to stay
+                            productive.</h2>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script src="/bundle.js"></script>
+</body>
+
+</html>
