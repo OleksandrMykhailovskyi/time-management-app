@@ -1,6 +1,6 @@
 ## PROJECT DESCRIPTION
 
-The “Productivity” application gives a tool for time management based on the Pomodoro technique. The use can use the app to create a task list, adding a short description and the estimated number of Pomodoros needed for the task. 
+The “Productivity” application gives a tool for time management based on the Pomodoro technique. The user can use the app to create a task list, adding a short description and the estimated number of Pomodoros needed for the task. 
 
 In addition, the user can start, stop and reset the timer for your Productivity, short and long break, and in the settings, the user can change the lengths of each period. The app has a reports page to facilitate analyzing previous user results.
 
