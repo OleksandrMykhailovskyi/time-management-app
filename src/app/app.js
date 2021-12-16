@@ -28,21 +28,6 @@ const router = new Router({
     mode: 'history'
 });
 
-// if(sessionStorage.hasOwnProperty('test')===false){
-//     //first-page render
-//     createFirstPageHtml();
-//     sessionStorage.setItem('test', 1);
-// }else{
-//     //add default router
-//     new HeaderListController(header, {icons: [
-//         'icon-trash',
-//         'icon-list',
-//         'icon-statistics',
-//         'icon-settings'
-//     ]});
-//     new TaskListController(root);
-// }
-
 //routes creation
 router.add(/task-list/, () => {
     fetchTasks((data)=>{
@@ -112,7 +97,7 @@ router.add(/settings$/, () => {
     new SettingsController(root);
 })
 
-// router.navigate('/task-list');
+router.navigate('/task-list');
 
 eventBus.subscribe('CHANGE_LOCATION', (str) =>{
     router.navigate(str);
