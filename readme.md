@@ -15,7 +15,7 @@ Within the application development, the next technologies stack is used.
 - Modularity with ES6 import;
 - Highcharts – for data visualization;
 - Firebase – for data storage;
-- Base libs for some functionality allowed (datepicker, JQuery);
+- Libs for some functionality (datepicker, JQuery);
 - Module bundler – Webpack;
 
 ## FOLDERS OVERVIEW
