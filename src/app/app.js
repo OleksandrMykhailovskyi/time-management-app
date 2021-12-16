@@ -97,7 +97,7 @@ router.add(/settings$/, () => {
     new SettingsController(root);
 })
 
-router.navigate('/task-list');
+// router.navigate('/task-list');
 
 eventBus.subscribe('CHANGE_LOCATION', (str) =>{
     router.navigate(str);
