@@ -1,19 +1,21 @@
 ## PROJECT DESCRIPTION
 
-The “Productivity” application gives a tool for time-management based on the Pomodoro technique. User can use the app to create a task list, adding a short description and the estimated number of Pomodoros needed for the task. In addition, user can start, stop and reset the timer for your Productivity, short and long break, and in the settings, user can change the lengths of each period. The app has a reports page to facilitate of analyze previous user’s results.
+The “Productivity” application gives a tool for time-management based on the Pomodoro technique. User can use the app to create a task list, adding a short description and the estimated number of Pomodoros needed for the task. 
+
+In addition, user can start, stop and reset the timer for your Productivity, short and long break, and in the settings, user can change the lengths of each period. The app has a reports page to facilitate of analyze previous user’s results.
 
 ## TECHNOLOGIES STACK
 
 Within the application development the next technologies stack is used.
-⦁	Node.js and NPM package manager;
-⦁	Markup: HTML5, Handlebars template engine;
-⦁	Styles: CSS3, LESS Preprocessor;
-⦁	ES6 using Babel as a transpiler;
-⦁	Modularity with ES6 import;
-⦁	Highcharts – for data visualization;
-⦁	Firebase – for data storage;
-⦁	Base libs for some functionality allowed (datepicker, JQuery);
-⦁	Module bundler – Webpack;
+- Node.js and NPM package manager;
+- Markup: HTML5, Handlebars template engine;
+- Styles: CSS3, LESS Preprocessor;
+- ES6 using Babel as a transpiler;
+- Modularity with ES6 import;
+- Highcharts – for data visualization;
+- Firebase – for data storage;
+- Base libs for some functionality allowed (datepicker, JQuery);
+- Module bundler – Webpack;
 
 ## FOLDERS OVERVIEW
 
