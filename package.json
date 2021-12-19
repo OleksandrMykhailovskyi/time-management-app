@@ -1,10 +1,5 @@
 {
     "name": "pomodoro-app",
-    "description": "RD-LAB Productivity Application",
-    "author": "Iurii Klymiuk",
-    "contributors": [
-        "Andrii Dieiev"
-    ],
     "scripts": {
         "build": "webpack",
         "start": "webpack-dev-server --open"
