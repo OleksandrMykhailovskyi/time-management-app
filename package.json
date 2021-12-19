@@ -1,5 +1,6 @@
 {
-    "name": "pomodoro-app",
+    "name": "time-management-app",
+    "author": "Oleksandr Mykhailovskyi",
     "scripts": {
         "build": "webpack",
         "start": "webpack-dev-server --open"
