@@ -40,5 +40,6 @@ All specific components are inside pages folder. For example - `app/pages/task-l
 1. install Node.js from the official site https://nodejs.org/
 2. run the terminal of your choice and make sure that you are at root of a project
 3. run `npm install` - this will install all required packages
-4. run `npm start` command - this will run a server on http://localhost:3000 (to access `task-list` page, please use URL http://localhost:3000/task-list)
+4. run `npm start` command - this will run a server on http://localhost:3000 . 
+!!!To access `task-list` page, please use URL http://localhost:3000/task-list .
 5. you can run `npm run build` to see the resulting structure in a file system (helps with the path to images etc.)
