@@ -1,8 +1,8 @@
 ## PROJECT DESCRIPTION
 
-The “Productivity” application gives a tool for time management. The user can use the app to create a task list, adding a short description and the estimated number of itterations needed for the task. 
+The Productivity application gives a tool for time management. It is possible to use the app to create a task list, add a short description and the estimated number of iterations needed for the task.
 
-In addition, the user can start, stop and reset the timer for your Productivity, short and long break, and in the settings, the user can change the lengths of each period. The app has a reports page to facilitate analyzing previous user results.
+In addition, the user can start, stop and reset the timer for your Productivity, short and long break, and in the settings, one can change the length of each period. The app has a reports page to facilitate analyzing user's results.
 
 ## TECHNOLOGIES STACK
 
